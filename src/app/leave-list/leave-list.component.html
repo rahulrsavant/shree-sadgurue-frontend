@@ -1,0 +1,72 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Leave List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>fromDate</th>
+          <th>toDate</th>
+          <th>reason</th>
+          <th>active</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let leave of leaves | async">
+
+          <td>{{leave.fromDate}}</td>
+          <td>{{leave.toDate}}</td>
+          <td>{{leave.reason}}</td>
+          <td>
+            <button (click)="deleteSalary(leave.id)" class="btn btn-danger">Delete</button>
+            <button (click)="updateSalary(leave.id)" class="btn btn-success" style="margin-left: 10px">Update</button>
+            <button (click)="salaryDetails(leave.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<!-- 
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Salary List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>EmployeeName</th>
+          <th>salaryYear</th>
+          <th>salaryMonth</th>
+          <th>salaryAmount</th>
+          <th>active</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let salary1 of salaries">         
+          <h1 *ngFor="let salary2 of salaries; let i = index">
+            <h1 *ngIf="salary2.employee.id == salary1.employee.id">
+              <td>{{salary2.employee.firstName+" "+salary2.employee.lastName}}</td>
+              <td>{{salary2.salaryYear}}</td>
+              <td>{{salary2.salaryMonth}}</td>
+              <td>{{salary2.salaryAmount}}</td>
+              <td>
+                <button (click)="deleteSalary(salary.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateSalary(salary.id)" class="btn btn-success"
+                  style="margin-left: 10px">Update</button>
+                <button (click)="salaryDetails(salary.id)" class="btn btn-info"
+                  style="margin-left: 10px">Details</button>
+              </td>
+            </h1>
+          </h1>        
+        </tr>        
+      </tbody>
+    </table>
+  </div>
+</div> --> 
