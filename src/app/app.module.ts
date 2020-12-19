@@ -35,6 +35,7 @@ import { BooksComponent } from './admin/books/books.component';
 import { MenuComponent } from './menu/menu.component';
 import { UsersComponent } from './admin/users/users.component';
 import { ShopbookComponent } from './shopbook/shopbook.component'
+import { MatButtonModule} from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { ShopbookComponent } from './shopbook/shopbook.component'
     MatSortModule,
     MatTableModule,
     MatPaginatorModule,
+    MatButtonModule,
     BrowserAnimationsModule    
   ],
   providers: [authInterceptorProviders],
