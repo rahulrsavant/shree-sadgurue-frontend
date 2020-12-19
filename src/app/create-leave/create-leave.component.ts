@@ -61,12 +61,16 @@ export class CreateLeaveComponent implements OnInit {
     this.gotoList();
   }
 
-  employeeChanged(id: number): void {
+  employeeChanged(id: number): void { 
     this.employeeService.getEmployee(id)
+
       .subscribe(data => {
         console.log(data)
         this.employee = data;        
-      }, error => console.log(error));
+      }, 
+      
+      error => console.log(error));
+
        console.log(this.leave);
   }
 
