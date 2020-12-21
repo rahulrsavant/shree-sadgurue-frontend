@@ -36,6 +36,7 @@ import { MenuComponent } from './menu/menu.component';
 import { UsersComponent } from './admin/users/users.component';
 import { ShopbookComponent } from './shopbook/shopbook.component'
 import { MatButtonModule} from '@angular/material/button'
+import { MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { MatButtonModule} from '@angular/material/button'
     MatTableModule,
     MatPaginatorModule,
     MatButtonModule,
+    MatIconModule,
     BrowserAnimationsModule    
   ],
   providers: [authInterceptorProviders],
